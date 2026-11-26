@@ -58,7 +58,31 @@ while True:
     if another != "yes":
         break
 
-#Receipt of the customer order 
+# Receipt
+print("========================================")
+print("        RECEIPT")
+print("      MINI STORE")
+print("========================================")
+print("Product       Qty   Price   Subtotal")
+print("------------------------")
+total = 0
+
+for i in range(len(ordered_products)):
+    if ordered_products[i] == "Burger":
+        print(ordered_products[i], "      ", quantities[i], "   ", prices[i], "   ", subtotals[i])
+    elif ordered_products[i] == "Fries":
+        print(ordered_products[i], "       ", quantities[i], "   ", prices[i], "   ", subtotals[i])
+    elif ordered_products[i] == "Soft Drink":
+        print(ordered_products[i], "  ", quantities[i], "   ", prices[i], "   ", subtotals[i])
+
+    total = total + subtotals[i]
+
+
+print("------------------------")
+print("TOTAL AMOUNT:         PHP", total)
+print("========================================")
+print("   THANK YOU FOR YOUR ORDER!")
+print("========================================")
 
 
 
